@@ -7,12 +7,21 @@ export default function TextForms(props) {
     // console.log("uppercase was clicked" + text);
     let newText=text.toUpperCase();
     setText(newText)
+    props.showAlert("converted to uppercase","success");
   }
 
   const handleupclicks=()=>{
     // console.log("uppercase was clicked" + text);
     let newText=text.toLowerCase();
     setText(newText)
+    props.showAlert("converted to lowercase","success");
+  }
+
+  const handleupclear=()=>{
+    // console.log("uppercase was clicked" + text);
+    let newText="";
+    setText(newText)
+    props.showAlert("cleared","success");
   }
 
   const handleupchange=(event)=>{
@@ -34,6 +43,7 @@ export default function TextForms(props) {
         </div>
         <button className="btn btn-primary" onClick={handleupclick}>convert to uppercase</button>
         <button className="btn btn-primary mx-2" onClick={handleupclicks}>convert to lowercase</button>
+        <button className="btn btn-primary mx-2" onClick={handleupclear}>convert to clear</button>
       </div>
        <div className="container my-3"style={{color:props.mode==='dark'?'white':'black'}}>
         <h1>your text summary</h1>
