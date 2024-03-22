@@ -30,7 +30,7 @@ const showAlert=(message,type)=>{
      
       document.body.style.backgroundColor ="#042743"
       
-      showAlert("dark mode has been enabled","success");
+      showAlert("dark mode has been enabled",'Success');
     }
     else
     {
