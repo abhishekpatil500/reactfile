@@ -28,7 +28,7 @@ export default function TextForms(props) {
     // console.log("on change");
     setText(event.target.value);
   }
-  const [text,setText] = useState('enter text here3');
+  const [text,setText] = useState('');
   //text= "new text";  wrong way to change the state
   // setText("new text"); correct way to change the state
   
