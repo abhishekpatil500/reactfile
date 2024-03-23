@@ -12,16 +12,25 @@ function App() {
   const [mode,setMode]=useState('light');//whether dark mode is enabled or not it show
    const [alert,setAlert]=useState(null);
 
-const showAlert=(message,type)=>{
+// const showAlert=(message,type)=>{
+//   setAlert({
+//     msg: message,
+//     type: type
+//   })
+//   setTimeout(()=>{
+//     setAlert(null);
+//   },3000)
+// }
+
+const showAlert = (message, type) => {
   setAlert({
     msg: message,
-    type: type
-  })
-  setTimeout(()=>{
+    type: type.toLowerCase() // Convert type to lowercase
+  });
+  setTimeout(() => {
     setAlert(null);
-  },3000)
-}
-
+  }, 3000);
+};
 
   const togglemode =()=>{
     if(mode==="light")
@@ -30,7 +39,7 @@ const showAlert=(message,type)=>{
      
       document.body.style.backgroundColor ="#042743"
       
-      showAlert("dark mode has been enabled",'Success');
+      showAlert("dark mode has been enabled","Success");
     }
     else
     {

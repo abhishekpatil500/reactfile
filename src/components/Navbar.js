@@ -51,13 +51,13 @@ export default function Navbar(props) {
 
 Navbar.protoType={
     title: PropTypes.string.isRequired,
-    search: PropTypes.string.isRequired
+    // search: PropTypes.string.isRequired
 
 }
 
 Navbar.defaultProps={
     title: 'set title here ',
-    search:'searching'
+    // search:'searching'
 }
 
 //rfc=react function based
