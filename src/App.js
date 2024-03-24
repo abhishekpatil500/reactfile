@@ -6,6 +6,14 @@ import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import TextForms from './components/TextForms';
 import React, { useState } from 'react';
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+//   Routes,
+//   Link
+// } from "react-router-dom";
+// import {Switch}from "react-router-dom";
 
 
 function App() {
@@ -51,14 +59,27 @@ const showAlert = (message, type) => {
   } 
   return (
     <>
-         
+    <Navbar title="TextUtils" mode={mode} togglemode={togglemode}></Navbar> 
+    <Alert alert={alert}></Alert>
+    <TextForms  showAlert={showAlert}heading="Enter the text to analyzes" mode={mode}></TextForms>
+      {/* this is part of routing which is old version not working */}
+      {/* <Router>
        <Navbar title="TextUtils" mode={mode} togglemode={togglemode}></Navbar> 
        <Alert alert={alert}></Alert>
-       <TextForms  showAlert={showAlert}heading="Enter the text to analyzes" mode={mode}></TextForms>
-        {/* <Abouts></Abouts> */}
-    
- 
-   </>
+        <div className='container my-3'>
+          
+            <Routes>
+              <Route path="/abouts">
+                <Abouts />
+              </Route>
+            
+              <Route path="/">
+                <TextForms  showAlert={showAlert}heading="Enter the text to analyzes" mode={mode}></TextForms>
+              </Route>
+            </Routes>
+        </div>
+      </Router>  */}
+      </>
   );
 }
 
