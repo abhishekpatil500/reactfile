@@ -1,5 +1,6 @@
 
 import './App.css';
+import Footers from './Footers';
 import Alert from './components/Alert';
 
 // import Abouts from './components/Abouts';
@@ -59,9 +60,15 @@ const showAlert = (message, type) => {
   } 
   return (
     <>
+    
     <Navbar title="TextUtils" mode={mode} togglemode={togglemode}></Navbar> 
     <Alert alert={alert}></Alert>
     <TextForms  showAlert={showAlert}heading="Enter the text to analyzes" mode={mode}></TextForms>
+    <Footers></Footers>
+   
+
+
+
       {/* this is part of routing which is old version not working */}
       {/* <Router>
        <Navbar title="TextUtils" mode={mode} togglemode={togglemode}></Navbar> 

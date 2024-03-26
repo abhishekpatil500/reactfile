@@ -41,14 +41,14 @@ export default function TextForms(props) {
           {/* <label for="myBox" class="form-label">Example textarea</label> */}
           <textarea className="form-control" value= {text} onChange={handleupchange}id="myBox"  style={{backgroundColor:props.mode==='light'?'white':'grey',color:props.mode==='light'?'grey':'white'}}rows="8"></textarea>
         </div>
-        <button className="btn btn-primary" onClick={handleupclick}>convert to uppercase</button>
-        <button className="btn btn-primary mx-2" onClick={handleupclicks}>convert to lowercase</button>
-        <button className="btn btn-primary mx-2" onClick={handleupclear}>convert to clear</button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleupclick}>convert to uppercase</button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleupclicks}>convert to lowercase</button>
+        <button className="btn btn-primary mx-2 my-2" onClick={handleupclear}>convert to clear</button>
       </div>
        <div className="container my-3"style={{color:props.mode==='dark'?'white':'black'}}>
         <h1>your text summary</h1>
         <p>
-          {text.split(" ").length } words and {text.length} charaters
+          {text.split(" ").filter((element)=>{return element.length!==0}).length } words and {text.length} charaters
 
         </p>
         <p>{0.008 * text.split(" ").length}minutes reading time</p>
